@@ -124,7 +124,6 @@ export function FooterContent() {
           ))}
         </div>
       </div>
-
       <motion.div
         ref={ref}
         initial="hidden"
@@ -276,19 +275,26 @@ export function FooterContent() {
                 </h4>
                 <ul className="space-y-3">
                   {[
-                    { title: "Summer", href: "/collections/summer" },
-                    { title: "Winter", href: "/collections/winter" },
-                    { title: "Monsoon", href: "/collections/monsoon" },
-                    { title: "Signature", href: "/collections/signature" },
-                    { title: "Limited Edition", href: "/collections/limited" },
+                    { name: "All Gifts", href: "/collections/all" },
+                    {
+                      name: "Bestsellers",
+                      href: "/collections/bestsellers",
+                    },
+                    { name: "New Arrivals", href: "/collections/new-arrivals" },
+                    { name: "Gift Boxes", href: "/collections/gift-boxes" },
+                    { name: "Personalized", href: "/collections/personalized" },
+                    {
+                      name: "Under ₹1000",
+                      href: "/collections/under-1000",
+                    },
                   ].map((collection) => (
-                    <li key={collection.title}>
+                    <li key={collection.name}>
                       <Link
                         href={collection.href}
                         className="hover:text-kevasiya-gold transition-all duration-300 flex items-center gap-2 group"
                       >
                         <span className="w-1 h-1 bg-kevasiya-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                        {collection.title}
+                        {collection.name}
                       </Link>
                     </li>
                   ))}
@@ -305,18 +311,18 @@ export function FooterContent() {
                   {[
                     { name: "About Us", href: "/about" },
                     { name: "Our Story", href: "/story" },
-                    { name: "Shipping Info", href: "/shipping" },
-                    { name: "Returns", href: "/returns" },
+                    { name: "Blog", href: "/blog" },
+                    { name: "Contact Us", href: "/contact" },
+                    { name: "FAQs", href: "/faq" },
                     { name: "Privacy Policy", href: "/privacy" },
-                    { name: "Terms of Service", href: "/terms" },
-                  ].map((link) => (
-                    <li key={link.name}>
+                  ].map((item) => (
+                    <li key={item.name}>
                       <Link
-                        href={link.href}
+                        href={item.href}
                         className="hover:text-kevasiya-gold transition-all duration-300 flex items-center gap-2 group"
                       >
                         <span className="w-1 h-1 bg-kevasiya-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                        {link.name}
+                        {item.name}
                       </Link>
                     </li>
                   ))}

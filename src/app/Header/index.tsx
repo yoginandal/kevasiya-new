@@ -1,14 +1,22 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Nav() {
+  const navLinks = [
+    { name: "Shop", href: "/collections" },
+    { name: "Baby", href: "/collections/baby" },
+    { name: "Wedding", href: "/collections/wedding" },
+    { name: "Occasions", href: "/collections/occasions" },
+    { name: "Corporates", href: "/corporates" },
+  ];
+
   return (
     <div className="absolute top-0 inset-x-0 z-50 ">
       {/* Premium Top Bar */}
       <div className="bg-gray-600 text-white text-center py-2 text-xs font-light tracking-wider">
         <p>Free Shipping in Delhi NCR • Limited Time Offer</p>
       </div>
-
       {/* Elegant Navbar */}
       <header className="relative h-16 mx-auto">
         <nav className="max-w-screen-xl mx-auto px-4 flex items-center justify-between w-full h-full text-gray-200">
@@ -51,19 +59,17 @@ export default async function Nav() {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center gap-8">
-            <div className="hidden lg:flex items-center gap-x-10">
-              {["Baby", "Wedding", "Corporates", "Occasions"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="relative font-medium text-gray-200 font-serif hover:text-[#AE8F65] transition-colors duration-300 group"
-                >
-                  {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-px bg-cyan-700 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-            </div>
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative font-medium text-gray-200 font-serif hover:text-[#AE8F65] transition-colors duration-300 group"
+              >
+                {link.name}
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-cyan-700 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
           </div>
         </nav>
       </header>

@@ -1,17 +1,23 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { FaBirthdayCake, FaHeart, FaHome, FaBaby, FaGift } from "react-icons/fa"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  FaBirthdayCake,
+  FaHeart,
+  FaHome,
+  FaBaby,
+  FaGift,
+} from "react-icons/fa";
 
 interface Occasion {
-  id: string
-  name: string
-  href: string
-  icon?: React.ElementType
-  description?: string
-  color?: string
+  id: string;
+  name: string;
+  href: string;
+  icon?: React.ElementType;
+  description?: string;
+  color?: string;
 }
 
 const occasionsData: Occasion[] = [
@@ -55,20 +61,20 @@ const occasionsData: Occasion[] = [
     description: "Unique presents for those extraordinary moments",
     color: "bg-[#F5D0FE]",
   },
-]
+];
 
 const AnimatedCard = ({
   occasion,
   index,
 }: {
-  occasion: Occasion
-  index: number
+  occasion: Occasion;
+  index: number;
 }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
     rootMargin: "-50px 0px",
-  })
+  });
 
   const variants = {
     hidden: { opacity: 0, y: 50, scale: 0.95 },
@@ -83,9 +89,9 @@ const AnimatedCard = ({
         delay: index * 0.2,
       },
     },
-  }
+  };
 
-  const IconComponent = occasion.icon
+  const IconComponent = occasion.icon;
 
   return (
     <motion.div
@@ -95,24 +101,25 @@ const AnimatedCard = ({
       variants={variants}
       className="flex justify-center" // Ensures proper centering on mobile
     >
-      <Link href={occasion.href} legacyBehavior>
-        <a className="group rounded-2xl h-[220px] w-full  md:max-w-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden transform hover:-translate-y-2 flex flex-col items-center justify-center md:p-6 text-center border border-gray-100 bg-white">
-          <div
-            className={`${occasion.color} rounded-full p-4 mb-4 transition-all duration-300 group-hover:scale-110`}
-          >
-            {IconComponent && (
-              <IconComponent className="w-8 h-8 text-[#3a5a40]" />
-            )}
-          </div>
-          <h3 className="text-xl font-semibold font-serif text-[#3a5a40] group-hover:text-[#AE8F65] transition-colors duration-300 mb-2">
-            {occasion.name}
-          </h3>
-          <p className="text-sm text-gray-600">{occasion.description}</p>
-        </a>
+      <Link
+        href={occasion.href}
+        className="group rounded-2xl h-[220px] w-full  md:max-w-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden transform hover:-translate-y-2 flex flex-col items-center justify-center md:p-6 text-center border border-gray-100 bg-white"
+      >
+        <div
+          className={`${occasion.color} rounded-full p-4 mb-4 transition-all duration-300 group-hover:scale-110`}
+        >
+          {IconComponent && (
+            <IconComponent className="w-8 h-8 text-[#3a5a40]" />
+          )}
+        </div>
+        <h3 className="text-xl font-semibold font-serif text-[#3a5a40] group-hover:text-[#AE8F65] transition-colors duration-300 mb-2">
+          {occasion.name}
+        </h3>
+        <p className="text-sm text-gray-600">{occasion.description}</p>
       </Link>
     </motion.div>
-  )
-}
+  );
+};
 
 const SpecialOccasions: React.FC = () => {
   return (
@@ -147,7 +154,7 @@ const SpecialOccasions: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SpecialOccasions
+export default SpecialOccasions;
