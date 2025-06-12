@@ -2,11 +2,13 @@ import { products } from "@/lib/products";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CategoryPage({
-  params,
-}: {
-  params: { category: string };
-}) {
+interface CategoryPageProps {
+  params: {
+    category: string;
+  };
+}
+
+export default function CategoryPage({ params }: CategoryPageProps) {
   const categoryName =
     params.category.charAt(0).toUpperCase() + params.category.slice(1);
   const categoryProducts = products.filter(
