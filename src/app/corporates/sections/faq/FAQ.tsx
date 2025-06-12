@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { motion, useInView, AnimatePresence } from "framer-motion"
+import { useState, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const faqData = [
   "How do I place an order?",
@@ -12,12 +12,12 @@ const faqData = [
   "Are the product colors shown on the website accurate?",
   "What if I order multiple products?",
   "How long will it take to receive my order?",
-]
+];
 
 export default function Component() {
-  const [openItems, setOpenItems] = useState<number[]>([])
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.1 })
+  const [openItems, setOpenItems] = useState<number[]>([]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const sectionFadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -31,7 +31,7 @@ export default function Component() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const titleFadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -40,7 +40,7 @@ export default function Component() {
       y: 0,
       transition: { duration: 0.5, ease: "easeOut" },
     },
-  }
+  };
 
   const listContainerFadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -49,7 +49,7 @@ export default function Component() {
       y: 0,
       transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.1 },
     },
-  }
+  };
 
   const faqItemFadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -58,7 +58,7 @@ export default function Component() {
       y: 0,
       transition: { duration: 0.4, ease: "easeOut" },
     },
-  }
+  };
 
   const answerReveal = {
     hidden: { opacity: 0, height: 0, y: -10 },
@@ -74,15 +74,15 @@ export default function Component() {
       y: -10,
       transition: { duration: 0.2, ease: "easeIn" },
     },
-  }
+  };
 
   const toggleItem = (index: number) => {
     setOpenItems((prev) =>
       prev.includes(index)
         ? prev.filter((item) => item !== index)
         : [...prev, index]
-    )
-  }
+    );
+  };
 
   return (
     <motion.div
@@ -131,9 +131,9 @@ export default function Component() {
                     className="px-2 pb-6 text-white/80 text-base leading-relaxed overflow-hidden"
                   >
                     <p>
-                      This is where the answer to "{question}" would appear. You
-                      can add detailed information, instructions, or any
-                      relevant content here.
+                      This is where the answer to &quot;{question}&quot; would
+                      appear. You can add detailed information, instructions, or
+                      any relevant content here.
                     </p>
                   </motion.div>
                 )}
@@ -146,5 +146,5 @@ export default function Component() {
         <p className="text-[#3A5834F5] text-center">Copyright © 2025 All Rights Reserved</p>
       </div> */}
     </motion.div>
-  )
+  );
 }

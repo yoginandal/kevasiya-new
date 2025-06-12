@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Nav() {
+export default function Nav() {
   const navLinks = [
     { name: "Shop", href: "/collections" },
     { name: "Baby", href: "/collections/baby" },

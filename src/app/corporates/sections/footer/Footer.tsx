@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   FiMail,
   FiPhone,
@@ -17,16 +17,16 @@ import {
   FiGift,
   FiClock,
   FiShield,
-} from "react-icons/fi"
-import { BiBuilding, BiLeaf } from "react-icons/bi"
+} from "react-icons/fi";
+import { BiBuilding, BiLeaf } from "react-icons/bi";
 
 const Footer = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
     rootMargin: "-50px 0px",
-  })
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,7 +37,7 @@ const Footer = () => {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 40, opacity: 0 },
@@ -50,13 +50,13 @@ const Footer = () => {
         stiffness: 100,
       },
     },
-  }
+  };
 
   const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Corporate contact:", email)
-    setEmail("")
-  }
+    e.preventDefault();
+    console.log("Corporate contact:", email);
+    setEmail("");
+  };
 
   const corporateServices = [
     {
@@ -79,7 +79,7 @@ const Footer = () => {
       title: "Express Delivery",
       desc: "Priority handling for urgent orders",
     },
-  ]
+  ];
 
   const socialLinks = [
     {
@@ -100,7 +100,7 @@ const Footer = () => {
       label: "Instagram",
       color: "hover:text-pink-500",
     },
-  ]
+  ];
 
   const quickLinks = [
     { name: "Corporate Solutions", href: "/corporate-solutions" },
@@ -109,7 +109,7 @@ const Footer = () => {
     { name: "B2B Pricing", href: "/b2b-pricing" },
     { name: "Partnership Program", href: "/partnership" },
     { name: "Enterprise Support", href: "/enterprise-support" },
-  ]
+  ];
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#1a2e1c] via-[#2d4230] to-[#3a5a40]">
@@ -330,7 +330,7 @@ const Footer = () => {
                     { icon: FiShield, text: "Trusted by 500+ Companies" },
                     { icon: BiLeaf, text: "Sustainable Practices" },
                     { icon: FiClock, text: "24/7 Corporate Support" },
-                  ].map((item, index) => (
+                  ].map((item) => (
                     <li
                       key={item.text}
                       className="flex items-center gap-3 text-white/80"
@@ -409,7 +409,7 @@ const Footer = () => {
         </motion.div>
       </motion.div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

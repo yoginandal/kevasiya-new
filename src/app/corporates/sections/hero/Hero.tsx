@@ -1,10 +1,10 @@
-"use client"
-import React, { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Hero = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const sectionFadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -18,16 +18,7 @@ const Hero = () => {
         staggerChildren: 0.3, // Stagger children animation
       },
     },
-  }
-
-  const textFadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  }
+  };
 
   return (
     <motion.section
@@ -73,7 +64,7 @@ const Hero = () => {
         </motion.p>
       </motion.div> */}
     </motion.section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

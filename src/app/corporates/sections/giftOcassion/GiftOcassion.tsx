@@ -1,13 +1,13 @@
-"use client"
-import React, { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import Container from "../../components/Container"
-import Image from "next/image"
-import Button from "../../components/Button"
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Container from "../../components/Container";
+import Image from "next/image";
+import Button from "../../components/Button";
 
 const GiftOcassion = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.1 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const sectionSlideInRight = {
     hidden: { opacity: 0, x: 100 },
@@ -21,7 +21,7 @@ const GiftOcassion = () => {
         staggerChildren: 0.3,
       },
     },
-  }
+  };
 
   const contentBlockFadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -30,7 +30,7 @@ const GiftOcassion = () => {
       y: 0,
       transition: { ease: "easeOut", duration: 0.6, staggerChildren: 0.2 },
     },
-  }
+  };
 
   const textElementFadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -39,7 +39,7 @@ const GiftOcassion = () => {
       y: 0,
       transition: { duration: 0.5, ease: "easeOut" },
     },
-  }
+  };
 
   const imageScaleUp = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -48,14 +48,12 @@ const GiftOcassion = () => {
       scale: 1,
       transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.2 },
     },
-  }
+  };
 
   const textFadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5, delay: 0.3 } },
-  }
-
-  const MotionButton = motion(Button)
+  };
 
   return (
     <motion.div
@@ -83,8 +81,10 @@ const GiftOcassion = () => {
               Bespoke Gifts and Eco-friendly gifts, meticulously crafted to
               boost your brand&apos;s sophistication.
             </motion.p>
-            <motion.div variants={textElementFadeInUp}
-            className="flex justify-center sm:justify-start">
+            <motion.div
+              variants={textElementFadeInUp}
+              className="flex justify-center sm:justify-start"
+            >
               <Button className="!mt-4 text-3xl w-fit sm:py-4 sm:px-8 mx-auto sm:mx-0 animate-pulse">
                 Contact Us
               </Button>
@@ -98,7 +98,6 @@ const GiftOcassion = () => {
               src="/images/occasion/occasion.webp"
               alt="Gift Ocassion"
               fill
-              
               className="object-cover "
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/0 to-black/0 transition-colors z-10"></div>
@@ -114,7 +113,7 @@ const GiftOcassion = () => {
         </section>
       </Container>
     </motion.div>
-  )
-}
+  );
+};
 
-export default GiftOcassion
+export default GiftOcassion;
