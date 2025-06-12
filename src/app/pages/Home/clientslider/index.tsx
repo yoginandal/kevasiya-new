@@ -66,8 +66,8 @@ export function ClientsSlider({ icons }: ClientsSliderProps) {
             variants={itemVariants}
             className="text-lg text-[#5a6d5c] max-w-2xl mx-auto"
           >
-            We're proud to collaborate with some of the most respected brands
-            worldwide
+            We&apos;re proud to collaborate with some of the most respected
+            brands worldwide
           </motion.p>
         </motion.div>
 
