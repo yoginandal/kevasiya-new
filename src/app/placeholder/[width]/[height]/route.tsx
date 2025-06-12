@@ -1,10 +1,12 @@
 import { ImageResponse } from "next/og";
 
-export function GET(
+export async function GET(
   _: Request,
-  { params }: { params: { width: string; height: string } }
+  {
+    params: paramsPromise,
+  }: { params: Promise<{ width: string; height: string }> }
 ) {
-  const { width, height } = params;
+  const { width, height } = await paramsPromise;
   return new ImageResponse(
     (
       <div
