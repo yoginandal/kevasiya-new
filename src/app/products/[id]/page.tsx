@@ -4,12 +4,17 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useState, use } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Zoom } from "yet-another-react-lightbox/plugins";
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({
+  params: paramsPromise,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const params = use(paramsPromise);
   const product = products.find((p) => p.id === params.id);
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
