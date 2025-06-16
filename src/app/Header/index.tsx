@@ -8,7 +8,8 @@ export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { name: "Shop", href: "/collections" },
-    { name: "Baby", href: "/collections/baby" },
+    { name: "Baby", href: "/baby" },
+    // { name: "Baby", href: "/collections/baby" },
     { name: "Wedding", href: "/collections/wedding" },
     { name: "Occasions", href: "/collections/occasions" },
     { name: "Corporates", href: "/corporates" },
