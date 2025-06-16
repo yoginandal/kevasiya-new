@@ -1,14 +1,20 @@
-"use client" // Required for Framer Motion hooks
+"use client"; // Required for Framer Motion hooks
 
-// import Header from "./sections/header/Header";
-import Hero from "./sections/hero/Hero"
-import GiftCategories from "./sections/giftcategories/GiftCategories"
-import GiftOcassion from "./sections/giftOcassion/GiftOcassion"
-import SeasonalGift from "./sections/seasonalGift/SeasonalGift"
-import Services from "./sections/servicesPage/Services"
+import dynamic from "next/dynamic";
+import Hero from "./sections/hero/Hero";
 
-import Form from "./sections/form/Form"
-import FAQ from "./sections/faq/FAQ"
+const GiftCategories = dynamic(
+  () => import("./sections/giftcategories/GiftCategories")
+);
+const GiftOcassion = dynamic(
+  () => import("./sections/giftOcassion/GiftOcassion")
+);
+const SeasonalGift = dynamic(
+  () => import("./sections/seasonalGift/SeasonalGift")
+);
+const Services = dynamic(() => import("./sections/servicesPage/Services"));
+const Form = dynamic(() => import("./sections/form/Form"));
+const FAQ = dynamic(() => import("./sections/faq/FAQ"));
 
 export default function Home() {
   return (
@@ -23,5 +29,5 @@ export default function Home() {
       <Form />
       <FAQ />
     </section>
-  )
+  );
 }
