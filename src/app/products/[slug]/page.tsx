@@ -23,14 +23,19 @@ async function getProductBySlug(slug: string): Promise<Product | undefined> {
     const product = products[0];
 
     // Safely parse JSON fields from the database
-    const safeParse = (jsonString: any): string[] => {
-      if (typeof jsonString !== "string") return jsonString || [];
-      try {
-        const parsed = JSON.parse(jsonString);
-        return Array.isArray(parsed) ? parsed : [];
-      } catch (e) {
-        return [];
+    const safeParse = (jsonString: string | string[] | null): string[] => {
+      if (Array.isArray(jsonString)) {
+        return jsonString;
       }
+      if (typeof jsonString === "string") {
+        try {
+          const parsed = JSON.parse(jsonString);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch {
+          return [];
+        }
+      }
+      return [];
     };
 
     return {

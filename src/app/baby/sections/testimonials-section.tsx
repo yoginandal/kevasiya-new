@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Star } from "lucide-react"
-import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
+import Image from "next/image";
 
 export function TestimonialsSection() {
   const testimonials = [
@@ -30,16 +30,19 @@ export function TestimonialsSection() {
       rating: 5,
       image: "/images/parent3.png",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-[#fdfcfa] to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3A5A40] mb-6">Stories from Fellow Parents' Hearts</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3A5A40] mb-6">
+            Stories from Fellow Parents&apos; Hearts
+          </h2>
           <p className="text-xl text-[#AE8F65] max-w-3xl mx-auto leading-relaxed">
-            The most beautiful moments are shared. Here are the experiences and wisdom from parents who've walked this
-            incredible journey before us.
+            The most beautiful moments are shared. Here are the experiences and
+            wisdom from parents who&apos;ve walked this incredible journey
+            before us.
           </p>
         </div>
 
@@ -54,11 +57,17 @@ export function TestimonialsSection() {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-5 h-5 ${i < testimonial.rating ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                      className={`w-5 h-5 ${
+                        i < testimonial.rating
+                          ? "text-yellow-400 fill-current"
+                          : "text-gray-300"
+                      }`}
                     />
                   ))}
                 </div>
-                <p className="text-[#AE8F65] mb-6 leading-relaxed italic">"{testimonial.content}"</p>
+                <p className="text-[#AE8F65] mb-6 leading-relaxed italic">
+                  &quot;{testimonial.content}&quot;
+                </p>
                 <div className="flex items-center">
                   <Image
                     src={testimonial.image || "/placeholder.svg"}
@@ -68,7 +77,9 @@ export function TestimonialsSection() {
                     className="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold text-[#3A5A40]">{testimonial.name}</h4>
+                    <h4 className="font-semibold text-[#3A5A40]">
+                      {testimonial.name}
+                    </h4>
                     <p className="text-sm text-[#b8956a]">{testimonial.role}</p>
                   </div>
                 </div>
@@ -78,5 +89,5 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

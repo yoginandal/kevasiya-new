@@ -16,6 +16,12 @@ interface Subcategory {
   slug: string;
 }
 
+interface Category {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 // Fetches all products for a given subcategory ID
 async function getProductsBySubcategoryId(
   subcategoryId: number
@@ -44,8 +50,8 @@ async function getSubcategoriesByCategorySlug(
       next: { revalidate: 3600 },
     });
     if (!catRes.ok) throw new Error("Failed to fetch categories");
-    const categories = await catRes.json();
-    const category = categories.find((c: any) => c.slug === categorySlug);
+    const categories: Category[] = await catRes.json();
+    const category = categories.find((c) => c.slug === categorySlug);
     if (!category) return [];
 
     const subCatRes = await fetch(
