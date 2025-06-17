@@ -134,8 +134,8 @@ export default function ProductDetailsClient({
                 </ul>
               ) : (
                 <p className="text-gray-600 mt-4">
-                  This hamper's contents are customized. Please contact us for
-                  details.
+                  This hamper&apos;s contents are customized. Please contact us
+                  for details.
                 </p>
               )}
             </div>
