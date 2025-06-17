@@ -22,6 +22,12 @@ interface Category {
   slug: string;
 }
 
+interface PageProps {
+  params: {
+    category: string;
+  };
+}
+
 // Fetches all products for a given subcategory ID
 async function getProductsBySubcategoryId(
   subcategoryId: number
@@ -66,11 +72,7 @@ async function getSubcategoriesByCategorySlug(
   }
 }
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: { category: string };
-}) {
+export default async function CategoryPage({ params }: PageProps) {
   const categorySlug = params.category;
   const subcategories = await getSubcategoriesByCategorySlug(categorySlug);
 
