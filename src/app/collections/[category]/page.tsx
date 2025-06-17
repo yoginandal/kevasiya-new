@@ -69,9 +69,9 @@ async function getSubcategoriesByCategorySlug(
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
-  const categorySlug = params.category;
+  const { category: categorySlug } = await params;
   const subcategories = await getSubcategoriesByCategorySlug(categorySlug);
 
   // Fetch products for all subcategories in parallel
