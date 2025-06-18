@@ -33,7 +33,7 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="sm:py-20 py-5 px-4 bg-gradient-to-b from-[#fdfcfa] to-white">
+    <section className="sm:py-20 py-10 px-4 bg-gradient-to-b from-[#fdfcfa] to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3A5A40] mb-6">

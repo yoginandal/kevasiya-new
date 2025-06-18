@@ -39,7 +39,7 @@ export function CTASection() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-r from-[#3A5A40] to-[#334d38]" >
+    <section className="py-10 sm:py-20 px-4 bg-gradient-to-r from-[#3A5A40] to-[#334d38]" >
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

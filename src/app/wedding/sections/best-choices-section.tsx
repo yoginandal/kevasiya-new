@@ -53,7 +53,7 @@ export function BestChoicesSection() {
   ];
 
   return (
-    <section className="py-5 sm:py-20 px-4 bg-gradient-to-b from-white to-[#fdfcfa]">
+    <section className="py-10 sm:py-20 px-4 bg-gradient-to-b from-white to-[#fdfcfa]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3A5A40] mb-6">
@@ -104,10 +104,12 @@ export function BestChoicesSection() {
                     </li>
                   ))}
                 </ul>
+                <a href="#book">
                 <Button className="w-full bg-[#AE8F65] hover:bg-[#967a58] text-white rounded-full">
                   <ShoppingCart className="w-4 h-4 mr-2" />
-                  Add to Registry
+                  Book Your Gift
                 </Button>
+                </a>
               </CardContent>
             </Card>
           ))}

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-30 pb-10 sm:pt-0">
+    <section className="relative h-max sm:h-screen flex items-center justify-center overflow-hidden pt-20 pb-10 sm:pt-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image

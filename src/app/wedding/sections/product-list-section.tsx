@@ -58,7 +58,7 @@ export function ProductListSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-white" id="products">
+    <section className="py-10 sm:py-20 px-4 bg-white" id="products">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3A5A40] mb-6">
