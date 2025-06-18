@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FiInstagram,
   FiTwitter,
@@ -19,14 +19,20 @@ import {
 import { BiLeaf } from "react-icons/bi";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { AnimatedParticles } from "./animated-particles";
 
 export function FooterContent() {
   const [email, setEmail] = useState("");
+  const [isMounted, setIsMounted] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
     rootMargin: "-50px 0px",
   });
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -101,28 +107,7 @@ export function FooterContent() {
         <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-kevasiya-gold/5 rounded-full blur-3xl"></div>
 
         {/* Animated Particles */}
-        <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-kevasiya-gold/20 rounded-full"
-              animate={{
-                y: [0, -10, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
+        {isMounted && <AnimatedParticles />}
       </div>
       <motion.div
         ref={ref}

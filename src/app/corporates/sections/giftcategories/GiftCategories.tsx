@@ -73,27 +73,25 @@ const GiftCategories = () => {
             variants={cardSlideIn}
             className="md:col-span-5 relative overflow-hidden sm:rounded-bl-[7rem] h-80 sm:h-[600px]"
           >
-            <Link href="#rewards-recognition" legacyBehavior>
-              <a>
-                <motion.div whileHover="hover" variants={imageHoverEffect}>
-                  <Image
-                    src="/images/categories/categories (1).webp"
-                    alt="Rewards and recognition gift box with wine and gourmet items"
-                    fill
-                    className="object-cover"
-                  />
-                </motion.div>
-                <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                  <motion.h2
-                    variants={textFadeIn}
-                    className="text-white text-3xl font-serif"
-                  >
-                    Rewards &<br />
-                    recognition
-                  </motion.h2>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
-              </a>
+            <Link href="#rewards-recognition">
+              <motion.div whileHover="hover" variants={imageHoverEffect}>
+                <Image
+                  src="/images/categories/categories (1).webp"
+                  alt="Rewards and recognition gift box with wine and gourmet items"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+              <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                <motion.h2
+                  variants={textFadeIn}
+                  className="text-white text-3xl font-serif"
+                >
+                  Rewards &<br />
+                  recognition
+                </motion.h2>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
             </Link>
           </motion.div>
 
@@ -107,26 +105,24 @@ const GiftCategories = () => {
               variants={cardSlideIn}
               className="relative overflow-hidden sm:rounded-tr-[7rem] h-80 sm:h-[345px]"
             >
-              <Link href="#work-anniversary" legacyBehavior>
-                <a>
-                  <motion.div whileHover="hover" variants={imageHoverEffect}>
-                    <Image
-                      src="/images/categories/categories (2).webp"
-                      alt="Work anniversary gift set with gourmet snacks and decorative items"
-                      fill
-                      className="object-cover"
-                    />
-                  </motion.div>
-                  <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                    <motion.h2
-                      variants={textFadeIn}
-                      className="text-white text-3xl font-serif"
-                    >
-                      Work Anniversary
-                    </motion.h2>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
-                </a>
+              <Link href="#work-anniversary">
+                <motion.div whileHover="hover" variants={imageHoverEffect}>
+                  <Image
+                    src="/images/categories/categories (2).webp"
+                    alt="Work anniversary gift set with gourmet snacks and decorative items"
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+                <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                  <motion.h2
+                    variants={textFadeIn}
+                    className="text-white text-3xl font-serif"
+                  >
+                    Work Anniversary
+                  </motion.h2>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
               </Link>
             </motion.div>
 
@@ -140,28 +136,26 @@ const GiftCategories = () => {
                 variants={cardSlideIn}
                 className="relative overflow-hidden h-80 sm:h-[230px]"
               >
-                <Link href="#employee-onboarding" legacyBehavior>
-                  <a>
-                    <motion.div whileHover="hover" variants={imageHoverEffect}>
-                      <Image
-                        src="/images/categories/categories (3).webp"
-                        alt="Employee onboarding gift basket with office supplies and treats"
-                        fill
-                        className="object-cover"
-                      />
-                    </motion.div>
-                    <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                      <motion.h2
-                        variants={textFadeIn}
-                        className="text-white text-3xl font-serif"
-                      >
-                        Employee
-                        <br />
-                        Onboarding
-                      </motion.h2>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0 transition-colors z-10"></div>
-                  </a>
+                <Link href="#employee-onboarding">
+                  <motion.div whileHover="hover" variants={imageHoverEffect}>
+                    <Image
+                      src="/images/categories/categories (3).webp"
+                      alt="Employee onboarding gift basket with office supplies and treats"
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                  <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                    <motion.h2
+                      variants={textFadeIn}
+                      className="text-white text-3xl font-serif"
+                    >
+                      Employee
+                      <br />
+                      Onboarding
+                    </motion.h2>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0 transition-colors z-10"></div>
                 </Link>
               </motion.div>
 
@@ -170,28 +164,26 @@ const GiftCategories = () => {
                 variants={cardSlideIn}
                 className="relative overflow-hidden h-80 sm:h-[230px]"
               >
-                <Link href="#client-appreciation" legacyBehavior>
-                  <a>
-                    <motion.div whileHover="hover" variants={imageHoverEffect}>
-                      <Image
-                        src="/images/categories/categories (4).webp"
-                        alt="Client appreciation gift set with premium items"
-                        fill
-                        className="object-cover"
-                      />
-                    </motion.div>
-                    <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                      <motion.h2
-                        variants={textFadeIn}
-                        className="text-white text-3xl font-serif"
-                      >
-                        Client
-                        <br />
-                        Appreciation
-                      </motion.h2>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
-                  </a>
+                <Link href="#client-appreciation">
+                  <motion.div whileHover="hover" variants={imageHoverEffect}>
+                    <Image
+                      src="/images/categories/categories (4).webp"
+                      alt="Client appreciation gift set with premium items"
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                  <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                    <motion.h2
+                      variants={textFadeIn}
+                      className="text-white text-3xl font-serif"
+                    >
+                      Client
+                      <br />
+                      Appreciation
+                    </motion.h2>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
                 </Link>
               </motion.div>
 
@@ -200,26 +192,24 @@ const GiftCategories = () => {
                 variants={cardSlideIn}
                 className="relative overflow-hidden h-80 sm:h-[230px]"
               >
-                <Link href="#clients" legacyBehavior>
-                  <a>
-                    <motion.div whileHover="hover" variants={imageHoverEffect}>
-                      <Image
-                        src="/images/categories/categories (5).webp"
-                        alt="Client gift basket with premium products"
-                        fill
-                        className="object-cover"
-                      />
-                    </motion.div>
-                    <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                      <motion.h2
-                        variants={textFadeIn}
-                        className="text-white text-3xl font-serif"
-                      >
-                        Clients
-                      </motion.h2>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
-                  </a>
+                <Link href="#clients">
+                  <motion.div whileHover="hover" variants={imageHoverEffect}>
+                    <Image
+                      src="/images/categories/categories (5).webp"
+                      alt="Client gift basket with premium products"
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                  <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                    <motion.h2
+                      variants={textFadeIn}
+                      className="text-white text-3xl font-serif"
+                    >
+                      Clients
+                    </motion.h2>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 transition-colors z-10"></div>
                 </Link>
               </motion.div>
             </motion.div>

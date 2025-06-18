@@ -1,13 +1,14 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Hero from "./hero";
-import CardSection from "./card-section";
-import { ClientsSlider } from "./clientslider";
-// import BestSeller from "../best-sellers";
-// import {
-//   getStoreProducts,
-//   UiProduct as Product,
-// } from "../../../../lib/data/products";
-import SpecialOccasions from "./special-occasions";
-import WhyKevasiya from "./why-kevasiya";
+
+const CardSection = dynamic(() => import("./card-section"));
+const ClientsSlider = dynamic(() =>
+  import("./clientslider").then((mod) => mod.ClientsSlider)
+);
+const SpecialOccasions = dynamic(() => import("./special-occasions"));
+const WhyKevasiya = dynamic(() => import("./why-kevasiya"));
 
 const icons = [
   { src: "/recruiters/accenture.webp", alt: "Accenture" },
@@ -36,15 +37,12 @@ const icons = [
   { src: "/recruiters/vmware.webp", alt: "VMware" },
 ];
 
-export default async function Home() {
-  //   const bestSellingProducts: Product[] = await getStoreProducts(4);
-
+export default function Home() {
   return (
     <div>
       <Hero />
       <CardSection />
       <ClientsSlider icons={icons} />
-      {/* <BestSeller products={bestSellingProducts} title="Our Best Sellers" /> */}
       <SpecialOccasions />
       <WhyKevasiya />
     </div>

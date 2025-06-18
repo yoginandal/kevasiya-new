@@ -87,15 +87,16 @@ export default function Nav() {
                   href={link.href}
                   className="relative font-medium text-gray-200 font-serif hover:text-[#AE8F65] transition-colors duration-300 group"
                 >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-px bg-cyan-700 transition-all duration-300 group-hover:w-full"></span>
+                  <span>
+                    {link.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-px bg-cyan-700 transition-all duration-300 group-hover:w-full"></span>
+                  </span>
                 </Link>
               ))}
             </div>
           </nav>
         </header>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
