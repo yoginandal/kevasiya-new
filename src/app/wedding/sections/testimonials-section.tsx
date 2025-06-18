@@ -40,8 +40,8 @@ export function TestimonialsSection() {
             Words from Happy Couples & Guests
           </h2>
           <p className="text-xl text-[#AE8F65] max-w-3xl mx-auto leading-relaxed">
-            Love stories are meant to be shared. Here's what others are saying
-            about our curated wedding gift experience.
+            Love stories are meant to be shared. Here&apos;s what others are
+            saying about our curated wedding gift experience.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export function TestimonialsSection() {
                   ))}
                 </div>
                 <p className="text-[#AE8F65] mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
+                  {`"${testimonial.content}"`}
                 </p>
                 <div className="flex items-center">
                   <Image

@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
-import { HeroSection } from "./sections/hero-section"
-import { BestChoicesSection } from "./sections/best-choices-section"
-import { ProductListSection } from "./sections/product-list-section"
-import { TestimonialsSection } from "./sections/testimonials-section"
-import { CTASection } from "./sections/cta-section"
-import { Footer } from "./sections/footer"
+import { HeroSection } from "./sections/hero-section";
+import { BestChoicesSection } from "./sections/best-choices-section";
+import { ProductListSection } from "./sections/product-list-section";
+import { TestimonialsSection } from "./sections/testimonials-section";
+import { CTASection } from "./sections/cta-section";
 
-export default function BabyAnnouncementPage() {
+export default function WeddingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream-50 to-white">
       <HeroSection />
@@ -15,7 +14,6 @@ export default function BabyAnnouncementPage() {
       <ProductListSection />
       <TestimonialsSection />
       <CTASection />
-      {/* <Footer /> */}
     </div>
-  )
+  );
 }
